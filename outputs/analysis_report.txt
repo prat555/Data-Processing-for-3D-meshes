@@ -1,0 +1,28 @@
+
+CONCLUSIONS AND OBSERVATIONS:
+
+1. BEST NORMALIZATION METHOD:
+   - The minmax normalization method achieved the lowest average 
+     reconstruction error across all meshes with an MSE of 0.00000039.
+
+2. ERROR PATTERNS OBSERVED:
+   - Quantization with 1024 bins introduces discrete approximation errors
+   - Min-Max normalization tends to preserve absolute coordinate relationships well
+   - Unit Sphere normalization is rotation-invariant but may introduce scaling artifacts
+   - Per-axis errors vary based on the mesh's geometric distribution along each axis
+
+3. INFORMATION LOSS:
+   - The reconstruction error is primarily due to quantization (discretization)
+   - Higher bin counts would reduce quantization error but increase storage requirements
+   - Trade-off between compression and accuracy is evident
+
+4. RECOMMENDATIONS:
+   - For geometric accuracy: Use Min-Max normalization with high bin count
+   - For rotation invariance: Use Unit Sphere normalization
+   - Consider adaptive quantization for meshes with non-uniform vertex distributions
+
+5. PRACTICAL IMPLICATIONS FOR AI/ML:
+   - Normalized and quantized meshes are suitable for neural network training
+   - The error levels observed (0.00000039 MSE) are acceptable for most 
+     3D learning tasks
+   - SeamGPT-style systems can work effectively with this preprocessing pipeline

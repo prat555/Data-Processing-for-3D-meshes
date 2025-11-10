@@ -1,0 +1,5 @@
+,mse,mse,mae,mae,rmse,rmse,relative_error,relative_error
+,mean,std,mean,std,mean,std,mean,std
+method,,,,,,,,
+minmax,3.9e-07,3.3e-07,0.00043628,0.0002075,0.00057679,0.00025969,0.19249363,0.10451374
+unit_sphere,1.1e-06,9.6e-07,0.00083763,0.00037651,0.0009663,0.0004414,0.3566256,0.27777391
